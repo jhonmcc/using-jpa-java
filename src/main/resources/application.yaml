@@ -1,3 +1,21 @@
 spring:
   application:
     name: using-jpa
+
+  datasource:
+    url: jdbc:h2:mem:parking
+#    url: jdbc:h2:file:/data/demo  this is used when you needs save the data
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver
+#    some url configs spring.datasource.url=jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;MODE=PostgreSQL;
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  h2:
+    console:
+      enabled: true
+#      some configs h2
+#      path: /h2-console
+#      settings.trace: false
+#      settings.web-allow-others: false
